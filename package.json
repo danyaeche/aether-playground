@@ -5,6 +5,6 @@
   "description": "A responsive static pizza showcase",
   "scripts": {
     "start": "python3 -m http.server 4173 --bind 0.0.0.0",
-    "check": "node --check script.js"
+    "check": "node --check site.js && node --check store.js && node --check script.js && node --check menu.js && node --check cart.js"
   }
 }

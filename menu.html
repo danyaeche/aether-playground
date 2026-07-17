@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Order wood-fired pizza from Forno's seasonal menu." />
+    <meta name="theme-color" content="#f1eee4" />
+    <title>Order Pizza — Forno</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23171812%22/><text x=%2250%22 y=%2267%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-style=%22italic%22 font-size=%2255%22 fill=%22%23d4df37%22>F</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <script src="store.js" defer></script>
+    <script src="site.js" defer></script>
+    <script src="menu.js" defer></script>
+  </head>
+  <body class="interior-page menu-page">
+    <a class="skip-link" href="#order-menu">Skip to menu</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Forno, home">
+        <span class="brand-mark" aria-hidden="true">F</span><span>FORNO</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle>
+        <span class="sr-only">Toggle navigation</span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
+        <a href="menu.html" aria-current="page">Order menu</a>
+        <a href="index.html#pizza-guide">The field guide</a>
+        <a href="index.html#craft">Our craft</a>
+        <a class="nav-cart-mobile" href="cart.html">Your cart <span data-cart-count>0</span></a>
+      </nav>
+      <a class="header-cta cart-link" href="cart.html">
+        Your cart <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </header>
+
+    <main id="order-menu">
+      <section class="menu-hero">
+        <div>
+          <p class="eyebrow dark"><span></span> Wood-fired &amp; made to order</p>
+          <h1>Tonight’s <em>menu.</em></h1>
+        </div>
+        <p>
+          Long-fermented dough, seasonal produce, and a 450° oven. Choose your
+          pizza and we’ll take care of the fire.
+        </p>
+        <div class="open-note"><i></i><span><strong>Oven is hot</strong>Ready in 20–30 min</span></div>
+      </section>
+
+      <section class="order-menu-section">
+        <div class="menu-toolbar">
+          <div class="menu-filters" role="group" aria-label="Filter order menu">
+            <button type="button" class="is-active" data-menu-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-menu-filter="classic" aria-pressed="false">Classics</button>
+            <button type="button" data-menu-filter="signature" aria-pressed="false">Signatures</button>
+            <button type="button" data-menu-filter="white" aria-pressed="false">White pies</button>
+            <button type="button" data-menu-filter="vegetarian" aria-pressed="false">Vegetarian</button>
+          </div>
+          <label class="menu-search">
+            <span class="sr-only">Search the menu</span>
+            <input type="search" placeholder="Search the menu" data-menu-search />
+            <span aria-hidden="true">⌕</span>
+          </label>
+        </div>
+
+        <div class="menu-meta">
+          <p data-menu-result-count>12 pizzas · page 1 of 2</p>
+          <p>All pizzas can be made with gluten-friendly dough <span>＋$3</span></p>
+        </div>
+
+        <div class="order-grid" data-menu-grid></div>
+        <nav class="menu-pagination" aria-label="Menu pages" data-menu-pagination></nav>
+      </section>
+
+      <aside class="menu-callout">
+        <div>
+          <p class="eyebrow"><span></span> Something for the table</p>
+          <h2>Don’t forget<br />the <em>edges.</em></h2>
+        </div>
+        <div class="callout-items">
+          <p><span>Garlic knots</span><strong>$8</strong></p>
+          <p><span>Little gem salad</span><strong>$11</strong></p>
+          <p><span>Tiramisu</span><strong>$9</strong></p>
+        </div>
+        <a href="cart.html">Review your order <span>→</span></a>
+      </aside>
+    </main>
+
+    <footer class="shop-footer">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark">F</span><span>FORNO</span></a>
+      <p>Flour. Fire. <em>Finally, pizza.</em></p>
+      <div><a href="index.html#craft">Our craft</a><a href="cart.html">Your cart</a></div>
+    </footer>
+
+    <div class="add-toast" data-toast role="status" aria-live="polite">
+      <span>✓</span><div><strong>Pizza</strong><small>Added to your cart</small></div><a href="cart.html">View cart →</a>
+    </div>
+  </body>
+</html>

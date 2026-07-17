@@ -81,40 +81,11 @@ const pizzas = {
   },
 };
 
-const header = document.querySelector("[data-header]");
-const menuToggle = document.querySelector("[data-menu-toggle]");
-const nav = document.querySelector("[data-nav]");
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const cards = [...document.querySelectorAll("[data-category]")];
 const resultCount = document.querySelector("[data-result-count]");
 const dialog = document.querySelector("[data-dialog]");
 const closeDialogButton = document.querySelector("[data-dialog-close]");
-
-const updateHeader = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 30);
-};
-
-updateHeader();
-window.addEventListener("scroll", updateHeader, { passive: true });
-
-const closeMenu = () => {
-  menuToggle.setAttribute("aria-expanded", "false");
-  nav.classList.remove("is-open");
-  document.body.classList.remove("menu-open");
-};
-
-menuToggle.addEventListener("click", () => {
-  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!isOpen));
-  nav.classList.toggle("is-open", !isOpen);
-  document.body.classList.toggle("menu-open", !isOpen);
-});
-
-nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
-
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && nav.classList.contains("is-open")) closeMenu();
-});
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {

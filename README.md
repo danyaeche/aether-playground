@@ -1,6 +1,6 @@
-# Forno — Pizza Field Guide
+# Forno — Pizza Field Guide & Ordering
 
-A responsive static pizza showcase built with plain HTML, CSS, and JavaScript.
+A responsive multi-page pizza showcase and ordering demo built with plain HTML, CSS, and JavaScript.
 
 ## Run locally
 
@@ -12,10 +12,16 @@ Then open [http://localhost:4173](http://localhost:4173).
 
 ## Features
 
-- Responsive editorial landing page
-- Filterable guide to eight regional pizza styles
-- Accessible pizza detail dialog
-- Mobile navigation
-- Reduced-motion support
+- Editorial landing page and filterable guide to eight regional styles
+- Paginated, searchable ordering menu with 12 pizzas and two sizes
+- Persistent localStorage cart with quantity controls and live totals
+- Pickup/delivery selection and validated demo checkout
+- Responsive mobile navigation and reduced-motion support
+
+## Pages
+
+- `/index.html` — pizza field guide
+- `/menu.html` — paginated order menu
+- `/cart.html` — cart and checkout
 
 The hero artwork was generated specifically for this project and optimized to WebP.

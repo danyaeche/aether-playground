@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review your Forno pizza order and check out." />
+    <meta name="theme-color" content="#f1eee4" />
+    <title>Your Cart — Forno</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23171812%22/><text x=%2250%22 y=%2267%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-style=%22italic%22 font-size=%2255%22 fill=%22%23d4df37%22>F</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <script src="store.js" defer></script>
+    <script src="site.js" defer></script>
+    <script src="cart.js" defer></script>
+  </head>
+  <body class="interior-page cart-page">
+    <a class="skip-link" href="#cart-main">Skip to your cart</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Forno, home">
+        <span class="brand-mark" aria-hidden="true">F</span><span>FORNO</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle>
+        <span class="sr-only">Toggle navigation</span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
+        <a href="menu.html">Order menu</a>
+        <a href="index.html#pizza-guide">The field guide</a>
+        <a href="index.html#craft">Our craft</a>
+        <a class="nav-cart-mobile" href="cart.html" aria-current="page">Your cart <span data-cart-count>0</span></a>
+      </nav>
+      <a class="header-cta cart-link" href="cart.html" aria-current="page">
+        Your cart <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </header>
+
+    <main id="cart-main">
+      <section class="cart-hero">
+        <p class="eyebrow dark"><span></span> Almost oven time</p>
+        <div><h1>Your <em>order.</em></h1><p>Review your pies, choose how you’ll get them, and we’ll fire up the oven.</p></div>
+      </section>
+
+      <div class="empty-cart" data-empty-cart hidden>
+        <div class="empty-pizza" aria-hidden="true"><span>?</span></div>
+        <p class="eyebrow dark"><span></span> Your cart is empty</p>
+        <h2>Let’s fix <em>that.</em></h2>
+        <p>Our dough is fermented and the oven is waiting.</p>
+        <a class="button button-dark" href="menu.html">Explore the menu <span>→</span></a>
+      </div>
+
+      <section class="cart-page-main" data-cart-layout hidden>
+        <div class="cart-contents">
+          <div class="cart-section-heading">
+            <h2>Your pizzas</h2>
+            <a href="menu.html">＋ Add another pizza</a>
+          </div>
+          <div class="cart-list" data-cart-list></div>
+
+          <form class="checkout-details" data-checkout-form id="checkout-form">
+            <div class="checkout-heading"><span>01</span><div><h2>How should we get it to you?</h2><p>Choose pickup or local delivery.</p></div></div>
+            <div class="fulfillment-toggle">
+              <label><input type="radio" name="fulfillment" value="pickup" checked /><span><strong>Pickup</strong><small>20–30 minutes · Free</small></span></label>
+              <label><input type="radio" name="fulfillment" value="delivery" /><span><strong>Delivery</strong><small>35–50 minutes · $4</small></span></label>
+            </div>
+
+            <div class="checkout-heading"><span>02</span><div><h2>Your details</h2><p>So we know who gets the good stuff.</p></div></div>
+            <div class="form-grid">
+              <label><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required /></label>
+              <label><span>Phone</span><input type="tel" name="phone" autocomplete="tel" placeholder="(555) 555-0123" required /></label>
+              <label data-address-field hidden><span>Delivery address</span><input type="text" name="address" autocomplete="street-address" placeholder="Street address" /></label>
+              <label><span>Ready time</span><select name="time"><option>As soon as possible</option><option>In 45 minutes</option><option>In 1 hour</option><option>In 90 minutes</option></select></label>
+              <label class="wide"><span>Order notes <small>Optional</small></span><textarea name="notes" rows="3" placeholder="Allergies, gate code, or anything we should know"></textarea></label>
+            </div>
+          </form>
+        </div>
+
+        <aside class="order-summary">
+          <p class="eyebrow"><span></span> Order summary</p>
+          <h2>Ready to<br /><em>fire it?</em></h2>
+          <dl>
+            <div><dt>Subtotal</dt><dd data-cart-subtotal>$0.00</dd></div>
+            <div><dt>Delivery</dt><dd data-cart-delivery>Free</dd></div>
+            <div><dt>Tax</dt><dd data-cart-tax>$0.00</dd></div>
+            <div class="summary-total"><dt>Total</dt><dd data-cart-total>$0.00</dd></div>
+          </dl>
+          <button type="submit" form="checkout-form" data-checkout-button>Place order <span>→</span></button>
+          <p class="secure-note"><span>◇</span> Demo checkout — no payment will be taken</p>
+        </aside>
+      </section>
+
+      <section class="order-success" data-order-success hidden>
+        <div class="success-mark" aria-hidden="true">✓</div>
+        <p class="eyebrow dark"><span></span> Order received</p>
+        <h1>It’s in the <em>oven.</em></h1>
+        <p>Order <strong data-order-number>FRN-00000</strong> is confirmed. <span data-order-method>We’ll have it ready for pickup.</span></p>
+        <div><span>Estimated time</span><strong>20–30 min</strong></div>
+        <a class="button button-dark" href="menu.html">Back to the menu <span>→</span></a>
+      </section>
+    </main>
+
+    <footer class="shop-footer">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark">F</span><span>FORNO</span></a>
+      <p>Good things take <em>time.</em></p>
+      <div><a href="menu.html">Order menu</a><a href="index.html">Field guide</a></div>
+    </footer>
+  </body>
+</html>
