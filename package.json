@@ -1,0 +1,10 @@
+{
+  "name": "forno-pizza-field-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive static pizza showcase",
+  "scripts": {
+    "start": "python3 -m http.server 4173 --bind 0.0.0.0",
+    "check": "node --check script.js"
+  }
+}

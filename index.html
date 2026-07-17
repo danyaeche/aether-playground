@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Forno is a field guide to eight iconic pizza styles, from Naples to New York."
+    />
+    <meta name="theme-color" content="#171812" />
+    <title>Forno — A Field Guide to Pizza</title>
+    <link rel="preload" href="assets/pizza-hero.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#pizza-guide">Skip to the pizza guide</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Forno, back to top">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>FORNO</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        data-menu-toggle
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
+        <a href="#pizza-guide">The pizzas</a>
+        <a href="#craft">Our craft</a>
+        <a href="#stories">Field notes</a>
+      </nav>
+
+      <a class="header-cta" href="#pizza-guide">Explore the guide <span>↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-image" role="img" aria-label="Fresh wood-fired margherita pizza on a dark stone table"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow"><span></span> A field guide to exceptional pizza</p>
+          <h1 id="hero-title">Every great pizza<br />tells a <em>story.</em></h1>
+          <p class="hero-copy">
+            Eight iconic styles. Centuries of craft. One delicious journey from
+            the cobbled streets of Napoli to the glowing ovens of Detroit.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pizza-guide">Find your slice <span>↓</span></a>
+            <a class="text-link" href="#craft">Discover the craft <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-facts" aria-label="Quick facts">
+          <div><strong>08</strong><span>regional<br />styles</span></div>
+          <div><strong>450°</strong><span>peak oven<br />temperature</span></div>
+          <p>Scroll to explore <span aria-hidden="true">↓</span></p>
+        </div>
+        <div class="oven-seal" aria-hidden="true">
+          <span>WOOD · FIRE · FLOUR · WATER ·</span>
+          <strong>450°</strong>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="Pizza ingredients">
+        <div class="marquee-track">
+          <span>FLOUR <i>✦</i> FIRE <i>✦</i> TIME <i>✦</i> TOMATO <i>✦</i> MOZZARELLA <i>✦</i> PASSION <i>✦</i></span>
+          <span aria-hidden="true">FLOUR <i>✦</i> FIRE <i>✦</i> TIME <i>✦</i> TOMATO <i>✦</i> MOZZARELLA <i>✦</i> PASSION <i>✦</i></span>
+        </div>
+      </section>
+
+      <section class="guide section-pad" id="pizza-guide" aria-labelledby="guide-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark"><span></span> Choose your character</p>
+            <h2 id="guide-title">Meet the <em>classics.</em></h2>
+          </div>
+          <p>
+            From cloud-soft cornicione to crisp, caramelized edges—every style
+            has its own rules, rituals, and reasons to love it.
+          </p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter pizzas by character">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All styles <sup>8</sup></button>
+          <button class="filter" type="button" data-filter="classic" aria-pressed="false">The classics <sup>3</sup></button>
+          <button class="filter" type="button" data-filter="crisp" aria-pressed="false">Crisp &amp; bold <sup>3</sup></button>
+          <button class="filter" type="button" data-filter="deep" aria-pressed="false">Deep &amp; hearty <sup>2</sup></button>
+        </div>
+
+        <div class="pizza-grid" data-pizza-grid>
+          <article class="pizza-card feature-card" data-category="classic">
+            <div class="pizza-visual visual-naples" aria-hidden="true">
+              <span class="card-number">01</span>
+              <div class="pizza pie-naples"><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="origin-stamp">NAPOLI<br />1889</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">Naples, Italy · The original</p>
+                <h3>Neapolitan</h3>
+                <p>Cloud-soft crust, charred leopard spots, sweet San Marzano tomato, and milky fior di latte.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="neapolitan" aria-label="Learn more about Neapolitan pizza">↗</button>
+            </div>
+          </article>
+
+          <article class="pizza-card" data-category="classic">
+            <div class="pizza-visual visual-rome" aria-hidden="true">
+              <span class="card-number">02</span>
+              <div class="pizza pie-rome"><i></i><i></i><i></i><i></i></div>
+              <span class="texture-note">THIN / CRISP</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">Rome, Italy · Thin &amp; crackly</p>
+                <h3>Roman Tonda</h3>
+                <p>Paper-thin and audibly crisp from center to edge, with a restrained hand on the toppings.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="roman" aria-label="Learn more about Roman Tonda pizza">↗</button>
+            </div>
+          </article>
+
+          <article class="pizza-card" data-category="classic">
+            <div class="pizza-visual visual-newyork" aria-hidden="true">
+              <span class="card-number">03</span>
+              <div class="slice slice-ny"><i></i><i></i><i></i></div>
+              <span class="texture-note">FOLD IT</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">New York, USA · The fold</p>
+                <h3>New York</h3>
+                <p>A broad, foldable slice with low-moisture mozzarella, tomato tang, and a crisp-chewy undercarriage.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="newyork" aria-label="Learn more about New York pizza">↗</button>
+            </div>
+          </article>
+
+          <article class="pizza-card" data-category="crisp">
+            <div class="pizza-visual visual-sicily" aria-hidden="true">
+              <span class="card-number">04</span>
+              <div class="square-pizza pie-sicily"><i></i><i></i><i></i><i></i></div>
+              <span class="origin-stamp light">SICILIA<br />SFINCIONE</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">Palermo, Italy · Airy &amp; golden</p>
+                <h3>Sicilian</h3>
+                <p>Focaccia-like dough with a golden bottom, plush crumb, tomato, onion, herbs, and pecorino.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="sicilian" aria-label="Learn more about Sicilian pizza">↗</button>
+            </div>
+          </article>
+
+          <article class="pizza-card feature-card" data-category="deep">
+            <div class="pizza-visual visual-detroit" aria-hidden="true">
+              <span class="card-number">05</span>
+              <div class="square-pizza pie-detroit"><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="texture-note light">FRICO EDGE</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">Detroit, USA · Caramelized edge</p>
+                <h3>Detroit</h3>
+                <p>Cheese all the way to the steel pan creates a lacy frico crown around a light, focaccia-like center.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="detroit" aria-label="Learn more about Detroit pizza">↗</button>
+            </div>
+          </article>
+
+          <article class="pizza-card" data-category="deep">
+            <div class="pizza-visual visual-chicago" aria-hidden="true">
+              <span class="card-number">06</span>
+              <div class="deep-dish"><span></span><i></i><i></i><i></i></div>
+              <span class="origin-stamp light">CHICAGO<br />DEEP DISH</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">Chicago, USA · Fork required</p>
+                <h3>Deep Dish</h3>
+                <p>A buttery, high-walled crust layered with mozzarella, fillings, and chunky tomato—in that order.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="chicago" aria-label="Learn more about Chicago Deep Dish pizza">↗</button>
+            </div>
+          </article>
+
+          <article class="pizza-card" data-category="crisp">
+            <div class="pizza-visual visual-apizza" aria-hidden="true">
+              <span class="card-number">07</span>
+              <div class="pizza pie-apizza"><i></i><i></i><i></i><i></i></div>
+              <span class="texture-note">COAL FIRED</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">New Haven, USA · Charred &amp; oblong</p>
+                <h3>New Haven Apizza</h3>
+                <p>A coal-fired, delightfully charred crust with an irregular shape and a signature smoky chew.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="apizza" aria-label="Learn more about New Haven Apizza">↗</button>
+            </div>
+          </article>
+
+          <article class="pizza-card" data-category="crisp">
+            <div class="pizza-visual visual-bari" aria-hidden="true">
+              <span class="card-number">08</span>
+              <div class="pizza pie-bari"><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="origin-stamp">BARI<br />PUGLIA</span>
+            </div>
+            <div class="pizza-info">
+              <div>
+                <p class="origin">Bari, Italy · Olive oil crunch</p>
+                <h3>Focaccia Barese</h3>
+                <p>A dimpled semolina dough with cherry tomatoes, olives, oregano, and a generous olive-oil crunch.</p>
+              </div>
+              <button class="card-action" type="button" data-pizza="barese" aria-label="Learn more about Focaccia Barese">↗</button>
+            </div>
+          </article>
+        </div>
+        <p class="result-count" aria-live="polite" data-result-count>Showing all 8 pizza styles</p>
+      </section>
+
+      <section class="craft" id="craft" aria-labelledby="craft-title">
+        <div class="craft-art" aria-hidden="true">
+          <span class="flour-word">FLOUR</span>
+          <div class="dough-orbit">
+            <div class="dough-ball"></div>
+            <span>01</span><span>02</span><span>03</span>
+          </div>
+        </div>
+        <div class="craft-copy">
+          <p class="eyebrow"><span></span> The beautiful basics</p>
+          <h2 id="craft-title">Four things.<br /><em>Endless possibility.</em></h2>
+          <p>
+            Flour, water, salt, and time. Pizza begins with a handful of humble
+            ingredients—and becomes extraordinary through patience, heat, and touch.
+          </p>
+          <ol>
+            <li><span>01</span><div><strong>Flour</strong><small>The structure</small></div></li>
+            <li><span>02</span><div><strong>Water</strong><small>The life</small></div></li>
+            <li><span>03</span><div><strong>Time</strong><small>The flavor</small></div></li>
+            <li><span>04</span><div><strong>Fire</strong><small>The finish</small></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="stories section-pad" id="stories" aria-labelledby="stories-title">
+        <p class="eyebrow dark"><span></span> Field notes</p>
+        <div class="stories-heading">
+          <h2 id="stories-title">Know your <em>dough.</em></h2>
+          <p>Small details make a remarkable difference.</p>
+        </div>
+        <div class="note-grid">
+          <article>
+            <span class="note-icon" aria-hidden="true">◌</span>
+            <p>Lesson 01 · Fermentation</p>
+            <h3>Why time is the most important ingredient</h3>
+            <a href="#craft">Read the note <span>→</span></a>
+          </article>
+          <article>
+            <span class="note-icon flame" aria-hidden="true">♨</span>
+            <p>Lesson 02 · Heat</p>
+            <h3>What 450 degrees does in ninety seconds</h3>
+            <a href="#craft">Read the note <span>→</span></a>
+          </article>
+          <article>
+            <span class="note-icon tomato" aria-hidden="true">✺</span>
+            <p>Lesson 03 · Balance</p>
+            <h3>Less topping, more flavor: the art of restraint</h3>
+            <a href="#craft">Read the note <span>→</span></a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <a class="brand footer-brand" href="#top"><span class="brand-mark">F</span><span>FORNO</span></a>
+        <p>Stay hungry.<br /><em>Stay curious.</em></p>
+        <a class="back-top" href="#top">Back to the top <span>↑</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Forno Field Guide</span>
+        <span>Made with flour, fire &amp; code.</span>
+        <span>Napoli → Everywhere</span>
+      </div>
+    </footer>
+
+    <dialog class="pizza-dialog" data-dialog aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" data-dialog-close aria-label="Close pizza details">×</button>
+      <p class="eyebrow dark"><span></span> Style profile</p>
+      <p class="dialog-number" data-dialog-number>01</p>
+      <h2 id="dialog-title" data-dialog-title>Neapolitan</h2>
+      <p class="dialog-origin" data-dialog-origin>Naples, Italy</p>
+      <p class="dialog-description" data-dialog-description></p>
+      <div class="dialog-notes">
+        <div><small>CRUST</small><strong data-dialog-crust></strong></div>
+        <div><small>BAKE</small><strong data-dialog-bake></strong></div>
+        <div><small>BEST WITH</small><strong data-dialog-pairing></strong></div>
+      </div>
+    </dialog>
+  </body>
+</html>
