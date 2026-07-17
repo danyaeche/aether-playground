@@ -10,15 +10,15 @@ let activeCategory = "all";
 let searchTerm = "";
 let currentPage = 1;
 
-const pizzaArtwork = (pizza) => `
-  <div class="menu-pizza-art art-${pizza.toppings}" style="--pizza-accent:${pizza.accent}" aria-hidden="true">
-    <div class="menu-pie"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+const pizzaArtwork = (pizza, index) => `
+  <figure class="menu-pizza-art art-${pizza.toppings}" style="--pizza-accent:${pizza.accent}">
+    <img src="assets/pizzas/${pizza.id}.webp" alt="${pizza.name} pizza — ${pizza.description}" width="800" height="800" ${index < 3 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async" />
     <span>${pizza.origin}</span>
-  </div>`;
+  </figure>`;
 
 const cardTemplate = (pizza, index) => `
   <article class="order-card" style="--card-delay:${index * 45}ms">
-    ${pizzaArtwork(pizza)}
+    ${pizzaArtwork(pizza, index)}
     <div class="order-card-copy">
       <div class="order-card-topline">
         <span>${pizza.badge}</span>

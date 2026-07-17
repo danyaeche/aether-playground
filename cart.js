@@ -29,8 +29,8 @@ const itemTemplate = (item) => {
   const price = window.FornoStore.getItemPrice(item);
   return `
     <article class="cart-item">
-      <div class="cart-item-art art-${pizza.toppings}" style="--pizza-accent:${pizza.accent}" aria-hidden="true">
-        <div class="mini-pie"><i></i><i></i><i></i><i></i></div>
+      <div class="cart-item-art art-${pizza.toppings}" style="--pizza-accent:${pizza.accent}">
+        <img src="assets/pizzas/${pizza.id}.webp" alt="${pizza.name} pizza" width="800" height="800" loading="lazy" decoding="async" />
       </div>
       <div class="cart-item-info">
         <p>${pizza.origin} · ${item.size.replace("-inch", " inch")}</p>
